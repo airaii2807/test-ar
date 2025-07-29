@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AR for Books</title>
+<script src="aframe.min.js"></script>
+<script src="aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs="trackingMethod: best; sourceType: webcam;">
+    <!-- Replace with your own image marker for a book page -->
+    <a-marker preset="hiro">
+      <a-box position='0 0.5 0' material='color: blue;'></a-box>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+  <p style="position: fixed; bottom: 10px; left: 10px; background: rgba(255,255,255,0.7); padding: 5px; font-family: sans-serif;">
+    Point your camera at a marker inside your book to see interactive content. Replace the marker with a custom image for your book pages.
+  </p>
+</body>
+</html>
